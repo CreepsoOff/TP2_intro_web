@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>lorraine</title>
+	<style>
+        .centree {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+	</style>
+</head>
+<body>
+<div class="centree">
+	<table>
+		<tr>
+			<td>
+				<strong>Bienvenue en lorraine</strong>
+				<br>
+				<br>
+				<span>Cliquez sur la carte pour accéder aux villes.</span>
+			</td>
+			<td>
+				<img src="fichiers/Lorraine.gif" alt="lorraine" usemap="#citymap">
+				<map name="citymap">
+					<area shape="rect" coords="53,106,116,137" alt="Bar-le-Duc" href="https://www.barleduc.fr">
+					<area shape="rect" coords="131,106,172,132" alt="Nancy" href="https://www.nancy.fr">
+					<area shape="rect" coords="151,67,199,87" alt="Metz" href="https://www.metz.fr">
+					<area shape="rect" coords="146,191,188,220" alt="Epinal" href="https://www.epinal.fr">
+				</map>
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

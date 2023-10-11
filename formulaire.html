@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>formulaire</title>
+</head>
+<body>
+
+<form action="formulaire.php" method="post">
+	<fieldset>
+		<legend>Informations personnelles</legend>
+		<label for="nom">Nom : </label><input type="text" id="nom" placeholder="Ex. Callot" maxlength="30" required autofocus> <br>
+		<label for="prenom">Prénom : </label><input type="text" id="prenom" placeholder="Ex. Jacques" maxlength="30" required>
+		<br>
+		<label for="civilite">Civilité : </label>
+		<select name="civilite" id="civilite">
+			<option value="monsieur">M.</option>
+			<option value="madame">Mme.</option>
+			<option value="mademoiselle">Mlle.</option>
+		</select> <br>
+		<label for="email">Email : </label><input type="email" id="email" placeholder="Ex: Jacques.Callot@loria.fr"
+		                                          maxlength="30" required> <br>
+		<label for="mdp">Mot de passe : </label><input type="password" id="mdp"> <br>
+	</fieldset>
+
+	<fieldset>
+		<legend>Niveau et compétence</legend>
+		<label>Votre niveau en HTML : <br>
+			<input type="radio" name="niveau" value="nul" checked>Nul<br>
+			<input type="radio" name="niveau" value="moyen">Moyen<br>
+			<input type="radio" name="niveau" value="bon">Bon<br>
+			<input type="radio" name="niveau" value="tres_bon">Très bon<br>
+		</label>
+		<label>Vous avez des compétences en : <br>
+			<input type="checkbox" name="competence" id="c" value="html"> <label for="c">C</label> <br>
+			<input type="checkbox" name="competence" id="cplusplus" value="c++"> <label for="cplusplus">C++</label> <br>
+			<input type="checkbox" name="competence" id="java" value="java"> <label for="java">Java</label> <br>
+			<input type="checkbox" name="competence" id="caml" value="caml"> <label for="caml">Caml</label> <br>
+		</label>
+
+		<label for="a_comp">Autres compétences :</label><br>
+		<textarea name="a_comp" id="a_comp" cols="40" rows="10"></textarea> <br>
+	</fieldset>
+
+	<fieldset>
+		<legend>Divers</legend>
+		<label for="couleur">Couleur préférée : </label> <input type="color" id="couleur"> <br>
+		<label for="pj_cv">Joindre votre CV au formulaire </label> <input type="file" id="pj_cv"> <br>
+		<label for="type_fichier">Type de fichier : </label>
+		<input type="text" name="type_fichier" id="type_fichier" list="fichiers" placeholder="Choisir parmi la liste">
+		<datalist id="fichiers">
+			<option value="DOC">
+			<option value="DOCX">
+			<option value="ODT">
+			<option value="PDF">
+			<option value="RTF">
+			<option value="TXT">
+		</datalist>
+		<br>
+		<label for="langue">Langues parlées : </label> <br>
+		<select name="langue" id="langue" size="9" multiple>
+			<optgroup label="Langues vivantes">
+				<option value="francais">Français</option>
+				<option value="espagnol">Espagnol</option>
+				<option value="allemand">Allemand</option>
+				<option value="italien">Italien</option>
+				<option value="portugais">Portugais</option>
+			</optgroup>
+			<optgroup label="Langues mortes">
+				<option value="latin">Latin</option>
+				<option value="grec">Grec</option>
+			</optgroup>
+		</select>
+	</fieldset>
+	<input type="reset" value="Remettre à zéro"> <input type="submit" value="Soumettre">
+</form>
+</body>
+</html>
